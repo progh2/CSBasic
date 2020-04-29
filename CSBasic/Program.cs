@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,11 +36,32 @@ namespace CSBasic
             Console.WriteLine("\"\"\"");
             Console.WriteLine("가" + "나" + "다");
 
-            Console.WriteLine("안녕"[100]);
+            //Console.WriteLine("안녕"[100]);
 
             Console.WriteLine(true);
             Console.WriteLine(true);
 
+            int a = 2000000000;
+            int b = 1000000000;
+            Console.WriteLine((long)a + b);
+            Console.WriteLine((long)a + (long)b);
+            Console.WriteLine(a + (long)b);
+            Console.WriteLine(a + b);
+
+            Console.WriteLine(long.MaxValue);
+            Console.WriteLine(long.MinValue);
+            Console.WriteLine(sizeof(char));
+            for(int i = '가'; i < '갹'; i++)
+            {
+                Console.Write((char)i);
+            }
+
+
+            var hello = "안녕~";
+            var hello2 = 10000;
+            Console.WriteLine("+++입력테스트+++");
+            string input = Console.ReadLine();
+            Console.WriteLine("입력:" + input);
         }
     }
 }
